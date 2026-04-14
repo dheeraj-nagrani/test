@@ -2,6 +2,17 @@ body {
   background-color: #f0f8ff;
   text-align: center;
   font-family: Arial;
+
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 h1 {
