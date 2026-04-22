@@ -1,32 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Aarav Nagrani</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
+<meta charset="UTF-8">
+<title>Stylish Timetable</title>
+
+<style>
     body {
-      background-color: #f0f8ff;
-      text-align: center;
-      font-family: Arial;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #9face6);
+        margin: 0;
+        padding: 30px;
     }
 
-    h1 {
-      color: blue;
-      font-size: 40px;
+    h2 {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
     }
 
-    p {
-      color: green;
-      font-size: 20px;
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
-  </style>
 
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    th {
+        background: #4a6cf7;
+        color: white;
+        padding: 12px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    td {
+        padding: 12px;
+        text-align: center;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f7f9fc;
+    }
+
+    tr:hover td {
+        background-color: #e3f2fd;
+        transform: scale(1.01);
+    }
+
+    td:first-child {
+        font-weight: bold;
+        background-color: #eef2ff;
+    }
+
+    /* Subject Colors */
+    .hindi { background-color: #ffe0b2; }
+    .science { background-color: #c8e6c9; }
+    .maths { background-color: #bbdefb; }
+    .eng { background-color: #f8bbd0; }
+    .sst { background-color: #d1c4e9; }
+    .ai { background-color: #b2dfdb; }
+    .lib { background-color: #d7ccc8; }
+    .pa { background-color: #fff9c4; }
+    .hpe { background-color: #ffccbc; }
+
+</style>
 </head>
+
 <body>
 
-  <h1>Hello World 🚀</h1>
-  <p>Aarav this side!!</p>
-  <button>Click Me</button>
+<h2>📅 Weekly Timetable</h2>
+
+<div class="container">
+
+<table>
+<tr>
+    <th>Day / Period</th>
+    <th>1st</th><th>2nd</th><th>3rd</th><th>4th</th>
+    <th>5th</th><th>6th</th><th>7th</th><th>8th</th>
+</tr>
+
+<tr>
+<td>Monday</td>
+<td class="hindi">Hindi</td>
+<td class="sst">SST</td>
+<td class="science">Science</td>
+<td class="science">Science</td>
+<td class="eng">Eng</td>
+<td class="eng">Eng</td>
+<td class="maths">Maths</td>
+<td class="sst">SST</td>
+</tr>
+
+<tr>
+<td>Tuesday</td>
+<td class="hindi">Hindi</td>
+<td class="sst">SST</td>
+<td class="science">Science</td>
+<td class="lib">Lib</td>
+<td class="eng">Eng</td>
+<td class="pa">P.A</td>
+<td class="pa">P.A</td>
+<td class="maths">Maths</td>
+</tr>
+
+<tr>
+<td>Wednesday</td>
+<td class="hindi">Hindi</td>
+<td class="sst">SST</td>
+<td class="science">Science</td>
+<td class="ai">AI</td>
+<td class="eng">Eng</td>
+<td class="hindi">Hindi</td>
+<td class="maths">Maths</td>
+<td class="maths">Maths</td>
+</tr>
+
+<tr>
+<td>Thursday</td>
+<td class="hindi">Hindi</td>
+<td class="maths">Maths</td>
+<td class="science">Science</td>
+<td class="hpe">H.P.E</td>
+<td class="hpe">H.P.E</td>
+<td class="eng">Eng</td>
+<td class="maths">Maths</td>
+<td class="sst">SST</td>
+</tr>
+
+<tr>
+<td>Friday</td>
+<td class="hindi">Hindi</td>
+<td class="science">Science</td>
+<td class="science">Science</td>
+<td class="ai">AI</td>
+<td class="ai">AI</td>
+<td class="eng">Eng</td>
+<td class="maths">Maths</td>
+<td class="sst">SST</td>
+</tr>
+
+</table>
+
+</div>
 
 </body>
 </html>
