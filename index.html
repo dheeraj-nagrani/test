@@ -2,78 +2,100 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Stylish Timetable</title>
+<title>Smart Timetable</title>
+
+<!-- Google Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 <style>
-    body {
-        font-family: 'Segoe UI', Tahoma, sans-serif;
-        background: linear-gradient(135deg, #74ebd5, #9face6);
-        margin: 0;
-        padding: 30px;
-    }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    margin: 0;
+    padding: 20px;
+}
 
-    h2 {
-        text-align: center;
-        color: #fff;
-        margin-bottom: 20px;
-    }
+h2 {
+    text-align: center;
+    color: white;
+}
 
-    .container {
-        max-width: 1100px;
-        margin: auto;
-        background: #ffffff;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 
+/* Responsive wrapper */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+}
+
+th {
+    background: #4a6cf7;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+tr:hover td {
+    background: #e3f2fd;
+}
+
+td:first-child {
+    font-weight: bold;
+    background: #eef2ff;
+}
+
+/* Subject styles */
+.subject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.hindi { background: #ffe0b2; }
+.science { background: #c8e6c9; }
+.maths { background: #bbdefb; }
+.eng { background: #f8bbd0; }
+.sst { background: #d1c4e9; }
+.ai { background: #b2dfdb; }
+.lib { background: #d7ccc8; }
+.pa { background: #fff9c4; }
+.hpe { background: #ffccbc; }
+
+/* Icon styling */
+.material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* Mobile stacked view (optional enhancement) */
+@media (max-width: 600px) {
     table {
-        width: 100%;
-        border-collapse: collapse;
-        overflow: hidden;
-        border-radius: 10px;
+        font-size: 12px;
     }
-
-    th {
-        background: #4a6cf7;
-        color: white;
-        padding: 12px;
-        font-size: 14px;
-        letter-spacing: 0.5px;
-    }
-
-    td {
-        padding: 12px;
-        text-align: center;
-        font-size: 14px;
-        transition: all 0.3s ease;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f7f9fc;
-    }
-
-    tr:hover td {
-        background-color: #e3f2fd;
-        transform: scale(1.01);
-    }
-
-    td:first-child {
-        font-weight: bold;
-        background-color: #eef2ff;
-    }
-
-    /* Subject Colors */
-    .hindi { background-color: #ffe0b2; }
-    .science { background-color: #c8e6c9; }
-    .maths { background-color: #bbdefb; }
-    .eng { background-color: #f8bbd0; }
-    .sst { background-color: #d1c4e9; }
-    .ai { background-color: #b2dfdb; }
-    .lib { background-color: #d7ccc8; }
-    .pa { background-color: #fff9c4; }
-    .hpe { background-color: #ffccbc; }
-
+}
 </style>
 </head>
 
@@ -82,76 +104,78 @@
 <h2>📅 Weekly Timetable</h2>
 
 <div class="container">
+<div class="table-wrapper">
 
 <table>
 <tr>
-    <th>Day / Period</th>
-    <th>1st</th><th>2nd</th><th>3rd</th><th>4th</th>
-    <th>5th</th><th>6th</th><th>7th</th><th>8th</th>
+    <th>Day</th>
+    <th>1</th><th>2</th><th>3</th><th>4</th>
+    <th>5</th><th>6</th><th>7</th><th>8</th>
 </tr>
 
 <tr>
-<td>Monday</td>
-<td class="hindi">Hindi</td>
-<td class="sst">SST</td>
-<td class="science">Science</td>
-<td class="science">Science</td>
-<td class="eng">Eng</td>
-<td class="eng">Eng</td>
-<td class="maths">Maths</td>
-<td class="sst">SST</td>
+<td>Mon</td>
+<td><div class="subject hindi">📖 Hindi</div></td>
+<td><div class="subject sst">🌍 SST</div></td>
+<td><div class="subject science">🔬 Science</div></td>
+<td><div class="subject science">🔬 Science</div></td>
+<td><div class="subject eng">📝 Eng</div></td>
+<td><div class="subject eng">📝 Eng</div></td>
+<td><div class="subject maths">➗ Maths</div></td>
+<td><div class="subject sst">🌍 SST</div></td>
 </tr>
 
 <tr>
-<td>Tuesday</td>
-<td class="hindi">Hindi</td>
-<td class="sst">SST</td>
-<td class="science">Science</td>
-<td class="lib">Lib</td>
-<td class="eng">Eng</td>
-<td class="pa">P.A</td>
-<td class="pa">P.A</td>
-<td class="maths">Maths</td>
+<td>Tue</td>
+<td><div class="subject hindi">📖 Hindi</div></td>
+<td><div class="subject sst">🌍 SST</div></td>
+<td><div class="subject science">🔬 Science</div></td>
+<td><div class="subject lib">📚 Lib</div></td>
+<td><div class="subject eng">📝 Eng</div></td>
+<td><div class="subject pa">🎨 P.A</div></td>
+<td><div class="subject pa">🎨 P.A</div></td>
+<td><div class="subject maths">➗ Maths</div></td>
 </tr>
 
 <tr>
-<td>Wednesday</td>
-<td class="hindi">Hindi</td>
-<td class="sst">SST</td>
-<td class="science">Science</td>
-<td class="ai">AI</td>
-<td class="eng">Eng</td>
-<td class="hindi">Hindi</td>
-<td class="maths">Maths</td>
-<td class="maths">Maths</td>
+<td>Wed</td>
+<td><div class="subject hindi">📖 Hindi</div></td>
+<td><div class="subject sst">🌍 SST</div></td>
+<td><div class="subject science">🔬 Science</div></td>
+<td><div class="subject ai">🤖 AI</div></td>
+<td><div class="subject eng">📝 Eng</div></td>
+<td><div class="subject hindi">📖 Hindi</div></td>
+<td><div class="subject maths">➗ Maths</div></td>
+<td><div class="subject maths">➗ Maths</div></td>
 </tr>
 
 <tr>
-<td>Thursday</td>
-<td class="hindi">Hindi</td>
-<td class="maths">Maths</td>
-<td class="science">Science</td>
-<td class="hpe">H.P.E</td>
-<td class="hpe">H.P.E</td>
-<td class="eng">Eng</td>
-<td class="maths">Maths</td>
-<td class="sst">SST</td>
+<td>Thu</td>
+<td><div class="subject hindi">📖 Hindi</div></td>
+<td><div class="subject maths">➗ Maths</div></td>
+<td><div class="subject science">🔬 Science</div></td>
+<td><div class="subject hpe">🏃 HPE</div></td>
+<td><div class="subject hpe">🏃 HPE</div></td>
+<td><div class="subject eng">📝 Eng</div></td>
+<td><div class="subject maths">➗ Maths</div></td>
+<td><div class="subject sst">🌍 SST</div></td>
 </tr>
 
 <tr>
-<td>Friday</td>
-<td class="hindi">Hindi</td>
-<td class="science">Science</td>
-<td class="science">Science</td>
-<td class="ai">AI</td>
-<td class="ai">AI</td>
-<td class="eng">Eng</td>
-<td class="maths">Maths</td>
-<td class="sst">SST</td>
+<td>Fri</td>
+<td><div class="subject hindi">📖 Hindi</div></td>
+<td><div class="subject science">🔬 Science</div></td>
+<td><div class="subject science">🔬 Science</div></td>
+<td><div class="subject ai">🤖 AI</div></td>
+<td><div class="subject ai">🤖 AI</div></td>
+<td><div class="subject eng">📝 Eng</div></td>
+<td><div class="subject maths">➗ Maths</div></td>
+<td><div class="subject sst">🌍 SST</div></td>
 </tr>
 
 </table>
 
+</div>
 </div>
 
 </body>
